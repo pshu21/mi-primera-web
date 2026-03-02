@@ -1,0 +1,181 @@
+:root {
+    --color-1: #88003b; 
+    --color-2: #8a6600; 
+    --color-3: #003ea1; 
+    --color-4: #00758f; 
+    --color-5: #742500; 
+    --color-6: #008170; 
+    --color-7: #5a4908;
+    --color-8: #600770;
+    --fondo-menu: #546368; 
+    --texto-menu: #ffffff; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+} 
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: var(--fondo-menu);
+
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100dvw;
+
+    height: 2rem;
+}
+
+nav ul li {
+    border: 2px solid rgb(88, 87, 87);
+    font-size: 0.85rem; 
+    padding: 0.6em;
+    width: 6rem;
+    text-align: center;
+
+}
+
+nav ul li:hover {
+    background-color: beige;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--texto-menu);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section#indice>div {
+    min-width: 50px;
+    /* max-width: 150px; */ 
+    padding: 15px;
+    margin: 5px;
+}
+
+aside {
+    grid-area: sb;
+    height: 100%;
+    padding-top: 8px;
+    padding-left: 0px;
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: lightgray;
+}
+
+footer {
+    display: flex;
+    background-color: #546368;
+}
+
+
+div.indice_item img {
+    max-width: 150px;
+}
+
+div#bd {
+    grid-area: bd;
+    background-color: var(--color-4);
+}
+
+div#lm {
+    grid-area: lm;
+    background-color: var(--color-5);
+}
+
+div#in {
+    grid-area: in;
+    background-color: var(--color-6);
+}
+
+div#hw {
+    grid-area: hw;
+    background-color: var(--color-7);
+}
+
+div#so {
+    grid-area: so;
+    background-color: var(--color-8);
+}
+
+div#redes {
+    grid-area: redes;
+}
+
+@media screen and (min-width: 768px) {
+    section#indice {
+        display: grid;
+        grid-template-columns: 10% auto auto;
+        grid-template-areas: 
+    "sb bd bd bd lm lm lm lm lm lm"
+    "sb bd bd bd lm lm lm lm lm lm"
+    "sb bd bd bd in in in in in in"
+    "sb hw hw hw in in in in in in"
+    "sb hw hw hw in in in in in in"
+    "sb hw hw hw so so so so so so"
+    "sb hw hw hw so so so so so so"
+    }
+    
+}
+
+@media (max-width: 768px) and (min-width: 480px) { 
+    main {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 
+    "sb sb"
+    "bd lm"
+    "bd lm"
+    "in hw"
+    "in hw"
+    "so so"
+    
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        display: grid;
+        grid-template-areas: 
+    "sb"
+    "bd"
+    "bd"
+    "bd"
+    "hw"
+    "hw"
+    "hw"
+    "hw"
+    }
+}
+
+@media print {
+    img{
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --color-1: #88003b; 
+    --color-2: #8a6600; 
+    --color-3: #003ea1; 
+    --color-4: #00758f; 
+    --color-5: #742500; 
+    --color-6: #008170; 
+    --color-7: #5a4908;
+    --color-8: #600770;
+    --fondo-menu: #262c2e; 
+    --texto-menu: #e2e2e2; 
+}
+}
